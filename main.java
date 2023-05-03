@@ -25,5 +25,11 @@ public class main {
 
         System.out.println(sana);
 
+        String arvattavaSana = "";
+
+        for (int i = 0; i < sana.length(); i++) {
+            arvattavaSana += "_";
+        }
+        System.out.println(arvattavaSana);
     }
 }
