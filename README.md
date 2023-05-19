@@ -4,3 +4,4 @@
 
 Ville Ollikainen & Jonna Sutinen
 
+TO-DO: Toteuta VäärätArvaukset luokka
