@@ -25,12 +25,6 @@ public class käyttöliittymä {
 
         //HALLITSEE VÄÄRÄT VASTAUKSET
 
-        tiedostonKäsittely tiedosto = new tiedostonKäsittely();
-
-        //SUORITTAA TIEDOSTON LUKEMISEN. SUORITA MYÖS SANAN RANDOMISOINTI TÄMÄN LUOKAN AVULLA JOS SILTÄ TUNTUU.
-
-
-
 
 
         //HAETAAN TEKSTITIEDOSTO
