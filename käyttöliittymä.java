@@ -25,7 +25,9 @@ public class käyttöliittymä {
 
         //HALLITSEE VÄÄRÄT VASTAUKSET
 
+    
 
+        
 
         //HAETAAN TEKSTITIEDOSTO
 
@@ -49,7 +51,7 @@ public class käyttöliittymä {
 
         Random random = new Random();
         String sana = sanat.get(random.nextInt(sanat.size()));
-
+        ArrayList<Character> väärätSanat = new ArrayList<>();
 
 
 
@@ -92,6 +94,9 @@ public class käyttöliittymä {
                 System.out.println("Älä käytä erikoisia merkkejä!");
                 continue;
             }
+            if(väärätSanat.contains(syötettyKirjain.charAt(0))) {
+                System.out.println("Kyseistä kirjainta on jo arvattu kerran!");
+            }
             
 
             
@@ -100,8 +105,11 @@ public class käyttöliittymä {
 
             char arvattuKirjain = syötettyKirjain.charAt(0);
 
-            if (sana.indexOf(arvattuKirjain) == -1) {
-                
+            if(väärätSanat.contains(arvattuKirjain)){}
+
+            else if (sana.indexOf(arvattuKirjain) == -1) {
+                väärä.lisää();
+                väärätSanat.add(arvattuKirjain);
                 // VÄÄRÄTARVAUKSET METODIN MUUNTAJAAN TULEE LISÄTÄ 1 JOS TÄMÄ IF- LAUSE ON TOSI
 
 
@@ -135,22 +143,22 @@ public class käyttöliittymä {
 
             //HAE TÄÄLLÄ VÄÄRÄTARVAUKSET METODIN MUUNTAJAN SUMMA JOTTA VOIMME RAKENTAA HIRSIPUUN VÄÄRIEN VASTAUKSIEN MÄÄRÄN MUKAAN
 
-            if ( == 1) {
+            if (väärä.getLaskuri() == 1) {
                 System.out.println("+---+ \n|   | \n|   0\n| \n|\n ");
             }
-            if ( == 2) {
+            if (väärä.getLaskuri() == 2) {
                 System.out.println("+---+ \n|   | \n|   0\n|   |\n|\n ");
             }
-            if ( == 3) {
+            if (väärä.getLaskuri() == 3) {
                 System.out.println("+---+ \n|   | \n|   0\n|  /|\n|\n ");
             }
-            if ( == 4) {
+            if (väärä.getLaskuri() == 4) {
                 System.out.println("+---+ \n|   | \n|   0\n|  /|\\ \n|\n ");
             }
-            if ( == 5) {
+            if (väärä.getLaskuri() == 5) {
                 System.out.println("+---+ \n|   | \n|   0\n|  /|\\ \n|  /\n ");
             }
-            if ( == 6) {
+            if (väärä.getLaskuri() == 6) {
                 System.out.println("+---+ \n|   | \n|   0\n|  /|\\ \n|  / \\ \n ");
                 System.out.println("Tappio! Oikea sana oli: " + sana);
                 break;
